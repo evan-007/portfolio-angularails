@@ -1,4 +1,4 @@
-<div ng-app="Portfolio" ng-controller="ProjectsController" ng-init="getProjects()">
+<div ng-controller="ProjectsController" ng-init="getProjects()">
 	<div class="row">
 		<div class="col-md-6">
 			<h1>Projects</h1>
@@ -6,7 +6,7 @@
 			<input ng-model="search" type="text" />
 			<ul>
 				<li ng-repeat="project in projects | filter:search">
-					{{ project.title }} <span ng-repeat="tag in project.tag_list">{{tag}} </span>
+					<a href="#/projects/{{project.id}}">{{ project.title }}</a> <span ng-repeat="tag in project.tag_list">{{tag}} </span>
 				</li>
 			</ul>
 		</div>
