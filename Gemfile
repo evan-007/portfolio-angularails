@@ -24,6 +24,8 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'active_model_serializers'
 
+gem 'acts-as-taggable-on'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 
 group :doc do
