@@ -7,6 +7,5 @@ angular.module('myApp.services', ['ngResource'])
 			});
 		}
 	};
-
 	return service;
 });
