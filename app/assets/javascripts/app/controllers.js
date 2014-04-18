@@ -1,3 +1,7 @@
 angular.module('myApp.controllers', [])
-.controller('HomeController', function($scope){
+.controller('ProjectsController', function($scope, ProjectsService) {
+	ProjectsService.getProjects()
+	.then(function(data) {
+		$scope.projects = data;
+	});
 });

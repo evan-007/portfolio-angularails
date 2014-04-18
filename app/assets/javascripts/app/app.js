@@ -1,8 +1,8 @@
-angular.module('myApp', ['ngRoute', 'myApp.controllers'])
+angular.module('myApp', ['ngRoute', 'myApp.controllers', 'myApp.services'])
 .config(function($routeProvider) {
 	$routeProvider.when('/', {
 		templateUrl: '/templates/dashboard.html',
-		controller: 'HomeController'
+		controller: 'ProjectsController'
 	})
 	.otherwise({redirectTo: '/'});
 });
