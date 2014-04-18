@@ -31,6 +31,7 @@ GEM
       actionpack (>= 3, < 5)
       activerecord (>= 3, < 5)
       activesupport (>= 3, < 5)
+    angularjs-rails (1.2.16)
     arel (4.0.2)
     builder (3.1.4)
     coffee-rails (4.0.1)
@@ -55,6 +56,8 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.9.2)
+    ngmin-rails (0.4.0)
+      rails (>= 3.1)
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.5.2)
@@ -124,8 +127,10 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   acts-as-taggable-on
+  angularjs-rails
   coffee-rails (~> 4.0.0)
   jquery-rails
+  ngmin-rails
   pg
   rails (= 4.0.2)
   rspec-rails
