@@ -1,12 +1,15 @@
-var myApp = angular.module('myApp', ['ngRoute', 'myApp.controllers', 'myApp.services', 'ui.router']);
-myApp.config(function($routeProvider) {
-	$routeProvider.when('/', {
-		templateUrl: '/templates/dashboard.html',
-		controller: 'ProjectsController'
-	})
-});
+var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.services', 'ui.router']);
+
 
 myApp.config(function($stateProvider, $urlRouterProvider){
-	$stateProvider.state('home', { url: '/home', templateUrl: 'templates/home'
-	});
+	$stateProvider
+		.state('home', {
+			url: '/home', 
+			templateUrl: 'templates/home',
+	})
+		.state('portfolio', {
+			url: '/portfolio',
+			templateUrl: 'templates/portfolio',
+			controller: 'ProjectsController'
+		});
 });
