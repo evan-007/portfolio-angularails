@@ -1,6 +1,19 @@
-<h2>portfolio</h2>
-	<ul>
-		<li ng-repeat="project in projects"> 
-			<a ng-href="#/projects/{{project.id}}">{{project.title}}</a>
-		</li>
-	</ul>
+<div class="row">
+	<div class="col-md-3">
+		<h2>portfolio</h2>
+		<a class="list-group-item"
+				ng-repeat="p in projects"
+				ng-class="{active: p.selected}"
+				ng-href="#/portfolio/project"
+				ng-click="selectedProject(p)">{{p.title}}
+		</a>
+
+			<ul>
+				<li ng-repeat="project in projects"> 
+					<a ng-href="#/portfolio/project/{{project.id}}">{{project.title}}</a>
+				</li>
+			</ul>
+
+	</div>
+	<div ui-view class="col-md-6"></div>
+</div>
