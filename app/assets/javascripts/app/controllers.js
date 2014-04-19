@@ -4,13 +4,4 @@ angular.module('myApp.controllers', [])
 	.then(function(data) {
 		$scope.projects = data;
 	});
-
-	$scope.selectProject = function(selectedProject) {
-		($scope.projects).each(function(project){
-			project.selected = false;
-			if (selectedProject === project) {
-				selectedProject.selected = true;
-			}
-		});
-	};
 });

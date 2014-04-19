@@ -1,2 +1,7 @@
-{{project.id}}
-fuck
+<h1>{{project.title}}</h1>
+
+<p>{{project.description}}</p>
+
+<li ng-repeat="t in project.tag_list">
+	{{t}}
+</li>

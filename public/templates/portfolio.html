@@ -6,13 +6,6 @@
 				ui-sref-active="active"
 				ui-sref="portfolio.project({ id: p.id})">{{p.title}}
 		</a>
-
-			<ul>
-				<li ng-repeat="project in projects"> 
-					<a ng-href="#/portfolio/project/{{project.id}}">{{project.title}}</a>
-				</li>
-			</ul>
-
 	</div>
 	<div ui-view class="col-md-6"></div>
 </div>

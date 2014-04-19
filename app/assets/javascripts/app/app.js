@@ -19,10 +19,8 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 		.state('portfolio.project', {
 			url: 'project/:id',
 			templateUrl: 'templates/portfolio.project.html',
-			controller: function($scope, $stateParams) {
-				$scope.project = $stateParams.id;
-				var a = $stateParams.id;
-				console.log(a);
+			controller: function($scope, $stateParams, utils) {
+				$scope.project = utils.findById($scope.projects, $stateParams.id);
 			}
 		});
 });
