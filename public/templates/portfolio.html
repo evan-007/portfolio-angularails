@@ -1,6 +1,6 @@
 <h2>portfolio</h2>
 	<ul>
-		<li ng-repeat="project in projects">
-			{{project.title}}
+		<li ng-repeat="project in projects"> 
+			<a ng-href="#/projects/{{project.id}}">{{project.title}}</a>
 		</li>
 	</ul>
