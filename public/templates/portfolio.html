@@ -1,8 +1,10 @@
 <div class="row">
 	<div class="col-md-3">
-		<h2>portfolio</h2>
+		<h2>Portfolio Selections</h2>
+		<p>View all or search for a tag like 'rails', 'jquery' or 'angular'</p>
+		<input ng-model="search" type="text">
 		<a class="list-group-item"
-				ng-repeat="p in projects"
+				ng-repeat="p in projects | filter:search"
 				ui-sref-active="active"
 				ui-sref="portfolio.project({ id: p.id})">{{p.title}}
 		</a>
