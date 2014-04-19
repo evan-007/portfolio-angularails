@@ -3,9 +3,8 @@
 		<h2>portfolio</h2>
 		<a class="list-group-item"
 				ng-repeat="p in projects"
-				ng-class="{active: p.selected}"
-				ng-href="#/portfolio/project"
-				ng-click="selectedProject(p)">{{p.title}}
+				ui-sref-active="active"
+				ui-sref="portfolio.project({ id: p.id})">{{p.title}}
 		</a>
 
 			<ul>

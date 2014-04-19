@@ -2,6 +2,8 @@ var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.services', 'ui.
 
 
 myApp.config(function($stateProvider, $urlRouterProvider){
+	$urlRouterProvider.otherwise("/");
+
 	$stateProvider
 		.state('home', {
 			url: '/home', 
@@ -15,8 +17,9 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 		})
 
 		.state('portfolio.project', {
-			url: '/:project',
+			url: 'project/:id',
 			templateUrl: 'templates/portfolio.project.html',
+
 
 		});
 });
