@@ -20,8 +20,9 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 		.state('portfolio.project', {
 			url: 'project/:id',
 			templateUrl: 'templates/portfolio.project.html',
-			controller: function($scope, $stateParams, utils) {
+			controller: function($scope, $sce, $stateParams, utils) {
 				$scope.project = utils.findById($scope.projects, $stateParams.id);
+				$scope.git = $sce.trustAsHtml($scope.project.git)
 			}
 		});
 });
