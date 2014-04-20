@@ -3,7 +3,7 @@ var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.services', 'ui.
 var someId = 1;
 
 myApp.config(function($stateProvider, $urlRouterProvider){
-	$urlRouterProvider.otherwise("/");
+	$urlRouterProvider.otherwise("/home");
 
 	$stateProvider
 		.state('home', {

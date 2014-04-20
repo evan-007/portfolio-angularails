@@ -1,13 +1,15 @@
-<h1>{{project.title}}</h1>
+<div class="well">
+	<h1>{{project.title}}</h1>
 
-<p>{{project.description}}</p>
+	<p>{{project.description}}</p>
 
-<a ng-href="{{git}}">Github</a> <br />
+	<a ng-href="{{git}}">Github</a> <br />
 
-<a ng-href="{{project.link}}">Demo</a> <br />
+	<a ng-href="{{project.link}}">Demo</a> <br />
 
-<img ng-src="{{project.image_medium}}" /> <br />
+	<img ng-src="{{project.image_medium}}" /> <br />
 
-<li ng-repeat="t in project.tags">
-	<img ng-src="{{t.avatar_thumb}}" />
-</li>
+	<span ng-repeat="t in project.tags">
+		<img ng-src="{{t.avatar_thumb}}" />  
+	</span>
+</div>

@@ -10,16 +10,19 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Welcome</h1>
-		<a href="#/home">Home</a>
-		<a href="#/portfolio">Projects</a>
-		<a href="#/portfolio">About</a>
-		<a href="#/portfolio">Blog</a>
-
-		
+		<div class="row">
+			<div class="col-lg-4">
+				<h1>Welcome</h1>
+				<ul class="list-inline list-unstyled">
+					<li><a href="#/home">Home</a></li>
+					<li><a href="#/portfolio">Projects</a></li>
+					<li><a href="#/portfolio">About</a></li>
+					<li><a href="#/portfolio">Blog</a></li>
+				</ul>
+			</div>
+		</div><!--row-->
 		<div ui-view></div>
 	</div>
-
 	<%= javascript_include_tag "application" %>
 </body>
 </html>
