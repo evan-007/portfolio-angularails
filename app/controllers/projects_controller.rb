@@ -60,6 +60,6 @@ class ProjectsController < ApplicationController
 
 	def project_params
 		params.require(:project).permit(:title, :description, :git,
-		:link, :tag_list, tag_ids: [])
+		:image, :link, :tag_list, tag_ids: [])
 	end
 end

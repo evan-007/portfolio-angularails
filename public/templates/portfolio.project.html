@@ -2,9 +2,11 @@
 
 <p>{{project.description}}</p>
 
-<a ng-href="{{git}}">Github</a>
+<a ng-href="{{git}}">Github</a> <br />
 
-<a ng-href="{{project.link}}">Demo</a>
+<a ng-href="{{project.link}}">Demo</a> <br />
+
+<img ng-src="{{project.image_medium}}" /> <br />
 
 <li ng-repeat="t in project.tag_list">
 	{{t}}
