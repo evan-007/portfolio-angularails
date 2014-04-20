@@ -1,5 +1,5 @@
 class ProjectSerializer < ActiveModel::Serializer
-	attributes :title, :description, :git, :link, :id, :image, :image_thumb, :image_medium, :tags
+	attributes :title, :description, :git, :link, :id, :image, :image_thumb, :image_medium, :tags, :lede
 	has_many :tags
 
 	def image_thumb
