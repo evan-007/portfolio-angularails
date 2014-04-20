@@ -4,10 +4,14 @@
 		<p>View all or search for a tag like 'rails', 'jquery' or 'angular'</p>
 		<input ng-model="search" type="text">
 		<a class="list-group-item"
-				ng-repeat="p in projects | filter:search"
+				ng-repeat="p in projects | filter:search | orderBy:'title'"
 				ui-sref-active="active"
 				ui-sref="portfolio.project({ id: p.id})">{{p.title}}
 		</a>
 	</div>
-	<div ui-view class="col-md-6"></div>
+	<div class="span12 ui-view-container">
+		<div class="col-md-6">
+			<div class="well" ui-view></div>
+		</div>
+	</div>
 </div>

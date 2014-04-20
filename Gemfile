@@ -10,6 +10,8 @@ gem 'ngmin-rails'
 
 gem 'rails_12factor'
 
+gem 'devise'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

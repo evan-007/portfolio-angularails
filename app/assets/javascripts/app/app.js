@@ -1,5 +1,6 @@
 var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.services', 'ui.router']);
 
+var someId = 1;
 
 myApp.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/");

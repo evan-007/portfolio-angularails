@@ -1,6 +1,8 @@
 Porfolio::Application.routes.draw do
+  devise_for :users
   root "pages#home"
-  resources :projects, only: [:index, :show]
+  resources :projects
+  get '/admin', to: 'projects#admin', as: 'admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

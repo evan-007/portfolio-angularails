@@ -1,0 +1,20 @@
+<%= form_for @project do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title, class: "form-control" %><br />
+
+<%= f.label :description %>
+<%= f.text_area :description, class: "form-control" %><br />
+
+<%= f.label :git %>
+<%= f.text_field :git, class: "form-control" %><br />
+
+<%= f.label :link %>
+<%= f.text_field :link, class: "form-control" %><br />
+
+<%= f.label :tag_list %>
+<%= f.text_field :tag_list, class: "form-control" %><br />
+
+<%= f.label :tag_ids %>
+<%= f.text_field :tag_ids, class: "form-control" %><br />
+<%= f.submit %>
+<% end %>

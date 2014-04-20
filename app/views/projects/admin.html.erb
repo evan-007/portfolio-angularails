@@ -1,0 +1,10 @@
+<div class='container'>
+	<%= link_to 'New project', new_project_path %>
+	<ul>
+		<% @projects.each do |p| %>
+			<li>
+				<%= link_to p.title, edit_project_path(p) %>
+			</li>
+		<% end %>
+	</ul>
+</div>
