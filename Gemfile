@@ -12,8 +12,9 @@ gem 'rails_12factor'
 
 gem 'devise'
 
+#s3 image uploads, config.yml!
 gem "paperclip", "~> 4.1"
-
+gem 'aws-sdk', '~> 1.5.7'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

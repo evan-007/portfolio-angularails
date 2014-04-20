@@ -4,6 +4,9 @@ Porfolio::Application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+  #stop heroku breaking all my angular
+  config.assets.js_compressor = Uglifier.new(mangle: false)
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
   # and those relying on copy on write to perform better.
