@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
 
 	def admin
 		@projects = Project.all
+		@tags = Tag.all
 	end
 
 	def new
@@ -60,6 +61,6 @@ class ProjectsController < ApplicationController
 
 	def project_params
 		params.require(:project).permit(:title, :description, :git,
-		:image, :link, :tag_list, tag_ids: [])
+		:image, :link, tag_ids: [])
 	end
 end

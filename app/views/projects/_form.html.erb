@@ -13,10 +13,12 @@
 		<%= f.label :link %>
 		<%= f.text_field :link, class: "form-control" %><br />
 
-		<%= f.label :tag_list %>
-		<%= f.text_field :tag_list, class: "form-control" %><br />
-
 		<%= f.file_field :image, class: "form-control" %><br />
+
+		<p>
+			<%= f.label :tags %>
+			<%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, { include_blank: true, multiple: true} %>
+		</p>
 
 		<%= f.submit %>
 		<% end %>

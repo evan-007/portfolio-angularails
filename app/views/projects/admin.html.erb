@@ -1,10 +1,19 @@
 <div class='container'>
-	<%= link_to 'New project', new_project_path %>
+	<%= link_to 'New project', new_project_path %>, <%= link_to 'New tag', new_tag_path %>
+	<h2>Projects</h2>
 	<ul>
 		<% @projects.each do |p| %>
 			<li>
 				<%= link_to p.title, edit_project_path(p) %>
 			</li>
+		<% end %>
+	</ul>
+	<h2>Tags</h2>
+	<ul>
+		<% @tags.each do |t| %>
+		<li>
+			<%= link_to t.name, edit_tag_path(t) %>
+		</li>
 		<% end %>
 	</ul>
 </div>

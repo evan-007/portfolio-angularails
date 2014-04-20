@@ -8,6 +8,6 @@
 
 <img ng-src="{{project.image_medium}}" /> <br />
 
-<li ng-repeat="t in project.tag_list">
-	{{t}}
+<li ng-repeat="t in project.tags">
+	<img ng-src="{{t.avatar_thumb}}" />
 </li>

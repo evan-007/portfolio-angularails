@@ -1,0 +1,11 @@
+<%= form_for @tag do |f| %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+	<%= f.label :avatar %>
+	<%= f.file_field :avatar %>
+</p>
+	<%= f.submit %>
+<% end %>
