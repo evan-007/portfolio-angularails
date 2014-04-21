@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.services', 'ui.router']);
+var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.services', 'ui.router', 'ngAnimate']);
 
 var someId = 1;
 
