@@ -10,6 +10,11 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 			url: '/home', 
 			templateUrl: 'templates/home',
 		})
+  
+    .state('about', {
+      url: '/about',
+      templateUrl: 'templates/about'
+    })
 
 		.state('portfolio', {
 			url: '/portfolio',

@@ -14,3 +14,19 @@ task import_projects: :environment do
 		p.save
 	end
 end
+
+task build_tags: :environment do
+  require 'csv'
+  @name = 0
+  
+  CSV.foreach("#{Rails.root}/lib/tasks/tags.csv") do |row|
+    t = Tag.new(name: row[@name])
+    t.save
+    file = File.open("#{Rails.root}/lib/tasks/images/#{t.name}.png")
+    t.avatar = file
+    t.save
+  end
+end
+
+task tag_projects: :environment do
+end
