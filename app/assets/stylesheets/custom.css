@@ -1,7 +1,3 @@
-.well[ui-view]{
- height: 65px; 
-}
-
 .ui-view-container {
   position: relative;
 }
@@ -15,6 +11,7 @@
     -o-transition:all .5s ease-in-out;
     transition:all .5s ease-in-out;
 }
+
 
 [ui-view].ng-enter {
   opacity: 0;
