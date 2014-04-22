@@ -19,4 +19,5 @@
 //= require angular-route
 //= require angular-resource
 //= require angular-animate
+//= require ui-bootstrap.min
 //= require_tree .
