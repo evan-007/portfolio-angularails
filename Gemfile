@@ -12,6 +12,8 @@ gem 'rails_12factor'
 
 gem 'devise'
 
+gem 'chosen-rails'
+
 #s3 image uploads, config.yml!
 gem "paperclip", "~> 4.1"
 gem 'aws-sdk', '~> 1.5.7'

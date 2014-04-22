@@ -18,11 +18,16 @@
 
 		<p>
 			<%= f.label :tags %>
-			<%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, { include_blank: true, multiple: true} %>
+      <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, { include_blank: true, multiple: true, size: 5} %>
 		</p>
-
+    
 		<%= f.submit %>
 		<% end %>
 	</div>
 </div>
 </div>
+
+<script>
+    $(document).ready(function() { $('#project_tag_ids').chosen({width: "50%"}); });
+
+</script>
