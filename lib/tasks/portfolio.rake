@@ -4,14 +4,14 @@ task import_projects: :environment do
 	@lede = 1
 	@desc = 2
 	@git = 3
-	@site = 4
-	@tags = 5
+	@link = 4
 
 	CSV.foreach("#{Rails.root}/lib/tasks/portfolio-sites.csv") do |row|
 		p = Project.new(title: row[@title],
 			lede: row[@lede],
 			description: row[@desc],
-			git: row[@git])
+			git: row[@git],
+			link: row[@link])
 		p.save
 	end
 end
