@@ -3,7 +3,7 @@ var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.services', 'ui.
 var someId = 1;
 
 myApp.config(function($stateProvider, $urlRouterProvider){
-	$urlRouterProvider.otherwise("/home");
+	$urlRouterProvider.otherwise("/home/main");
 
 	$stateProvider
 		.state('home', {
@@ -11,7 +11,12 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 			templateUrl: 'templates/home',
 		})
   
-    .state('about', {
+    .state('home.main', {
+      url: '/main',
+      templateUrl: 'templates/main',
+    })
+  
+    .state('home.about', {
       url: '/about',
       templateUrl: 'templates/about'
     })

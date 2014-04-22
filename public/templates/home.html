@@ -1,34 +1,14 @@
-<div class="row">
-  <div class="col-sm-8 col-sm-offset-2">
-    <div class="alert-success">I'm available for small projects in June and July</div>
-    <h2>I make websites</h2>
-  	<p>I'll put some text here about some stuff</p>
-  </div>
-</div>
 <hr>
 <div class="row">
   
   <div class="col-sm-3">
-    <i class="fa fa-desktop fa-5x fa-spin"></i>
-    <h2>Some Header</h2>
-    <p>Some text</p>
+    <a class="list-group-item" ui-sref-active="active" ui-sref="home.main"><i class="fa fa-home fa-5x"></i></a>
+    <a class="list-group-item" ui-sref-active="active" ui-sref="portfolio"><i class="fa fa-folder fa-5x"></i></a>
+    <a class="list-group-item" ui-sref-active="active" ui-sref="home.about"><i class="fa fa-question fa-5x"></i></a>
   </div>
   
-  <div class="col-sm-3">
-    <i class="fa fa-cog fa-5x fa-spin"></i>
-    <h2>Some Header</h2>
-    <p>Some text</p>
-  </div>
-  
-  <div class="col-sm-3">
-    <i class="fa fa-cloud fa-5x fa-spin"></i>
-    <h2>Some Header</h2>
-    <p>Some text</p>
-  </div>
-  
-  <div class="col-sm-3">
-    <i class="fa fa-comments-o fa-5x fa-spin"></i>
-    <h2>Some Header</h2>
-    <p>Some text</p>
-  </div>
-</div>
+  <div class="col-sm-9">
+    <div class="ui-view-container">
+  		<div ui-view></div>
+    </div>
+	</div>
