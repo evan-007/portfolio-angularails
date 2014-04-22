@@ -1,5 +1,6 @@
 class ProjectSerializer < ActiveModel::Serializer
-	attributes :title, :description, :git, :link, :id, :image, :image_thumb, :image_medium, :tags, :lede
+	attributes :title, :description, :git, :link, :id, :image,
+	:image_full, :image_thumb, :image_medium, :tags, :lede
 	has_many :tags
 
 	def image_thumb
@@ -8,6 +9,10 @@ class ProjectSerializer < ActiveModel::Serializer
 
 	def image_medium
 		object.image.url(:medium)
+	end
+
+	def image_full
+		object.image.url
 	end
 
 

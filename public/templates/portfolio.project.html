@@ -1,13 +1,9 @@
 <div class="well">
-	<h1>{{project.title}}</h1>
+	<h2>{{project.title}}  <a ng-href="{{git}}"><i class="fa fa-github-square"></i></a></h2>
 
 	<p>{{project.lede}}</p>
-
-	<a ng-href="{{git}}">Github</a> <br />
-
-	<a ng-href="{{project.link}}">Demo</a> <br />
-
-	<img ng-src="{{project.image_medium}}" alt="project-preview" /> <br />
+	
+	<a ng-href="{{project.link}}"><img ng-src="{{project.image_medium}}" alt="project-preview" /></a> <br />
 	<button class="btn btn-lg btn-default" ng-click="isCollapsed = !isCollapsed">Show Details</button><br /><br />
 	<div collapse="!isCollapsed"
 		<p>{{project.description}}</p>
