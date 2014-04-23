@@ -14,6 +14,10 @@
 		<%= f.label :link %>
 		<%= f.text_field :link, class: "form-control" %><br />
 
+		<% if @project.image.exists? %>
+		<p>Current image:</p>
+		<%= image_tag @project.image.url(:thumb) %>
+		<% end %>
 		<%= f.file_field :image %><br />
 
 		<p>
