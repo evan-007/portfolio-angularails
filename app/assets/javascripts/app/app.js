@@ -32,7 +32,7 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 			templateUrl: 'templates/portfolio.project.html',
 			controller: function($scope, $sce, $stateParams, utils) {
 				$scope.project = utils.findById($scope.projects, $stateParams.id);
-				$scope.git = $sce.trustAsHtml($scope.project.git)
+				$scope.git = $sce.trustAsHtml($scope.project.git);
 			}
 		})
   
