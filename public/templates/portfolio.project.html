@@ -3,9 +3,10 @@
 
 	<p>{{project.lede}}</p>
 	
-	<a ng-href="{{project.link}}"><img ng-src="{{project.image_medium}}" alt="project-preview" /></a> <br />
-	<button class="btn btn-lg btn-default" ng-click="isCollapsed = !isCollapsed">Show Details</button><br /><br />
-	<div collapse="!isCollapsed"
+	<a ng-href="{{project.link}}"><img ng-src="{{project.image_big}}" class="img-responsive" alt="project-preview" /></a> <br />
+	
+  <button class="btn btn-lg btn-default" ng-click="isCollapsed = !isCollapsed">Show Details</button><br /><br />
+	<div collapse="!isCollapsed">
 		<p>{{project.description}}</p>
 	</div>
 
