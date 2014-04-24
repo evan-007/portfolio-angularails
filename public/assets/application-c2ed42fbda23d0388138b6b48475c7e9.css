@@ -551,3 +551,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
   -moz-transform:translate3d(100px, 0, 0);
   transform:translate3d(100px, 0, 0);
 }
+
+p {
+  font-size: 1.5em;
+}
+
+li {
+  font-size: 1.3em;
+}
