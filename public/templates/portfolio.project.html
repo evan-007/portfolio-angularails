@@ -7,7 +7,7 @@
 	
   <button class="btn btn-lg btn-default" ng-click="isCollapsed = !isCollapsed">Show Details</button><br /><br />
 	<div collapse="!isCollapsed">
-		<p>{{project.description}}</p>
+    <div ng-bind-html="description"></div>
 	</div>
 
 

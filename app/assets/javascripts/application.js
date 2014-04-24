@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require tinymce-jquery
 //= require chosen-jquery
 //= require bootstrap.min
 //= require angular
@@ -20,4 +21,5 @@
 //= require angular-resource
 //= require angular-animate
 //= require ui-bootstrap.min
+//= require tinymce-jquery
 //= require_tree .

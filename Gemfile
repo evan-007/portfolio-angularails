@@ -18,6 +18,8 @@ gem 'chosen-rails'
 gem "paperclip", "~> 4.1"
 gem 'aws-sdk', '~> 1.5.7'
 
+gem 'tinymce-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

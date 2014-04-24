@@ -33,6 +33,7 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 			controller: function($scope, $sce, $stateParams, utils) {
 				$scope.project = utils.findById($scope.projects, $stateParams.id);
 				$scope.git = $sce.trustAsHtml($scope.project.git);
+        $scope.description = $sce.trustAsHtml($scope.project.description);
 			}
 		})
   
