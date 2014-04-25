@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
 	before_action :set_project, only: [:edit, :update, :destroy, :show]
 
 	def index
-		@projects = Project.all
+		@projects = Project.active
 		render json: @projects 
 	end
 
