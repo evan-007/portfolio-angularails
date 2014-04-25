@@ -1,19 +1,40 @@
-<div class='container'>
-	<%= link_to 'New project', new_project_path %>, <%= link_to 'New tag', new_tag_path %>
-	<h2>Projects</h2>
-	<ul>
-		<% @projects.each do |p| %>
-			<li>
-				<%= link_to p.title, edit_project_path(p) %>
-			</li>
-		<% end %>
-	</ul>
-	<h2>Tags</h2>
-	<ul>
-		<% @tags.each do |t| %>
-		<li>
-			<%= link_to t.name, edit_tag_path(t) %>
-		</li>
-		<% end %>
-	</ul>
+<div class="admin container">
+	<div class="row">
+		<div class="col-md-4">
+			<%= link_to 'New project', new_project_path, class: "btn btn-primary" %> 
+			<%= link_to 'New tag', new_tag_path, class: "btn btn-warning" %>
+		</div>
+	</div>
+	<div class="row well">
+		<div class="col-md-6">
+			<h2>Projects</h2>
+			<table class="table-striped">
+				<th>Name</th>
+				<th>ID</th>
+				<th>Active?</th>
+				<th>Image</th>
+				<% @projects.each do |p| %>
+					<tr>
+						<td><%= link_to p.title, edit_project_path(p)%></td>
+						<td><%= p.id %></td>
+						<td><%= p.active %></td>
+						<td><%= image_tag(p.image.url(:thumb)) %></td>
+					</tr>
+				<% end %>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<h2>Tags</h2>
+			<table class="table-striped">
+				<th>Name</th>
+				<th>Image</th>
+				<% @tags.each do |t| %>
+				<tr>
+					<td><%= link_to t.name, edit_tag_path(t) %></td>
+					<td><%= image_tag(t.avatar.url(:thumb)) %></td>
+				</tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
 </div>

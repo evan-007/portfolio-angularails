@@ -1,11 +1,18 @@
-<%= form_for @tag do |f| %>
-	<p>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</p>
-	<p>
-	<%= f.label :avatar %>
-	<%= f.file_field :avatar %>
-</p>
-	<%= f.submit %>
-<% end %>
+<div class="admin container">
+	<%= form_for @tag do |f| %>
+		<p>
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+		</p>
+
+		<% unless @tag.avatar.blank? %>
+			<p>Current image: <%= image_tag(@tag.avatar.url(:thumb)) %></p>
+		<% end %>
+
+		<p>
+			<%= f.label :image %>
+			<%= f.file_field :avatar %>
+		</p>
+			<%= f.submit %>
+	<% end %>
+</div>

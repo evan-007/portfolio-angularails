@@ -1,5 +1,5 @@
 <%= tinymce %>
-<div class="container">
+<div class="admin container">
 <div class='row'>
 	<div class="col-md-8">
 		<%= form_for @project do |f| %>
@@ -25,6 +25,11 @@
 		<p>
 			<%= f.label :tags %>
       <%= f.collection_select :tag_ids, Tag.order(:name), :id, :name, {}, { include_blank: true, multiple: true, size: 5} %>
+		</p>
+
+		<p>
+			<%= f.label "Show on homepage?" %>
+			<%= f.check_box :active %>
 		</p>
     
 		<%= f.submit %>
