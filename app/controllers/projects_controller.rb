@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
 	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :admin]
+	before_action :admin_only!, except: [:index, :show]
 	before_action :set_project, only: [:edit, :update, :destroy, :show]
 
 	def index
@@ -62,5 +63,11 @@ class ProjectsController < ApplicationController
 	def project_params
 		params.require(:project).permit(:title, :description, :git,
 		:image, :active, :link, tag_ids: [])
+	end
+
+	def admin_only!
+		if current_user.admin == false
+			redirect_to root_path
+		end
 	end
 end
