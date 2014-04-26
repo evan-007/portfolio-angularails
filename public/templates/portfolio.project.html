@@ -2,13 +2,14 @@
 	<h2>{{project.title}}  <a ng-href="{{git}}"><i class="fa fa-github-square" tooltip-placement="right" tooltip="Source"></i></a></h2>
 
 	<p>{{project.lede}}</p>
-	
-	<a ng-href="{{project.link}}"><img ng-src="{{project.image_big}}" class="img-responsive" alt="project-preview" /></a> <br />
-	
+
   <button class="btn btn-lg btn-default" ng-click="isCollapsed = !isCollapsed">Show Details</button><span ng-repeat="t in project.tags">
 		<img ng-src="{{t.avatar_thumb}}" />  
 	</span><br /><br />
 	<div collapse="!isCollapsed">
     <div ng-bind-html="description"></div>
 	</div>
+	
+	<a ng-href="{{project.link}}"><img ng-src="{{project.image_big}}" class="img-responsive" alt="project-preview" /></a> <br />
+	
 </div>
