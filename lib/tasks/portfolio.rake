@@ -29,5 +29,8 @@ task build_tags: :environment do
   end
 end
 
-task tag_projects: :environment do
+task create_user: :environment do
+	a = User.new(email: ENV['EMAIL'], password: ENV['PASSWORD'],
+		password_confirmation: ENV['PASSWORD_CONFIRMATION'])
+	a.save
 end
