@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
 
 	def index
 		@projects = Project.active
-		render json: @projects 
+		render json: @projects
 	end
 
 	def show
@@ -62,7 +62,7 @@ class ProjectsController < ApplicationController
 
 	def project_params
 		params.require(:project).permit(:title, :description, :git,
-		:image, :active, :link, tag_ids: [])
+		:image, :active, :lede, :link, tag_ids: [])
 	end
 
 	def admin_only!
