@@ -22,4 +22,6 @@
 //= require angular-animate
 //= require ui-bootstrap.min
 //= require tinymce-jquery
+//= require lodash.min
+//= require restangular.min
 //= require_tree .

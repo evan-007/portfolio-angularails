@@ -1,4 +1,5 @@
-var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.services', 'ui.router', 'ngAnimate', 'ui.bootstrap']);
+var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.services',
+ 'ui.router', 'ngAnimate', 'ui.bootstrap', 'restangular']);
 
 var someId = 1;
 
@@ -7,15 +8,15 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 
 	$stateProvider
 		.state('home', {
-			url: '/home', 
+			url: '/home',
 			templateUrl: 'templates/home',
 		})
-  
+
     .state('home.main', {
       url: '/main',
       templateUrl: 'templates/main',
     })
-  
+
     .state('home.about', {
       url: '/about',
       templateUrl: 'templates/about'
@@ -36,7 +37,7 @@ myApp.config(function($stateProvider, $urlRouterProvider){
         $scope.description = $sce.trustAsHtml($scope.project.description);
 			}
 		})
-  
+
     .state('portfolio.more', {
       url: '/more',
       templateUrl: 'templates/portfolio.more.html'
