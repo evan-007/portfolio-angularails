@@ -1,4 +1,4 @@
 angular.module('myApp.controllers', [])
-.controller('ProjectsController', function($scope, ProjectsService, Projects) {
+.controller('ProjectsController', function($scope, Projects) {
 	$scope.projects = Projects
 });

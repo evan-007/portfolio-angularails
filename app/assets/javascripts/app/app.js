@@ -34,10 +34,14 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 		.state('portfolio.project', {
 			url: '/project/:id',
 			templateUrl: 'templates/portfolio.project.html',
-			controller: function($scope, $sce, $stateParams, utils) {
+			resolve: { Project: function(Restangular, $stateParams){
+				return Restangular.one('projects', $stateParams.id).get();
+			}},
+			controller: function($scope, $sce, $stateParams, utils, Project) {
 				$scope.project = utils.findById($scope.projects, $stateParams.id);
 				$scope.git = $sce.trustAsHtml($scope.project.git);
         $scope.description = $sce.trustAsHtml($scope.project.description);
+				console.log(Project)
 			}
 		})
 

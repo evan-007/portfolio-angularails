@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def show
-		render json: @project
+		render json: @project, root: false
 	end
 
 	def admin
