@@ -38,7 +38,7 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 				return Restangular.one('projects', $stateParams.id).get();
 			}},
 			controller: function($scope, $sce, $stateParams, utils, Project) {
-				$scope.project = utils.findById($scope.projects, $stateParams.id);
+				$scope.project = Project;
 				$scope.git = $sce.trustAsHtml($scope.project.git);
         $scope.description = $sce.trustAsHtml($scope.project.description);
 				console.log(Project)
