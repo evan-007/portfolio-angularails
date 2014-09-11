@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
 
 	def index
 		@projects = Project.active
-		render json: @projects
+		render json: @projects, root: false
 	end
 
 	def show

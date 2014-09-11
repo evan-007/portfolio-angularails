@@ -25,7 +25,10 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 		.state('portfolio', {
 			url: '/portfolio',
 			templateUrl: 'templates/portfolio',
-			controller: 'ProjectsController'
+			controller: 'ProjectsController',
+			resolve: { Projects: function(Restangular){
+				return Restangular.all('projects').getList();
+			}}
 		})
 
 		.state('portfolio.project', {
