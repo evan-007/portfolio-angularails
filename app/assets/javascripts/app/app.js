@@ -1,8 +1,6 @@
 var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.services',
  'ui.router', 'ngAnimate', 'ui.bootstrap', 'restangular']);
 
-var someId = 1;
-
 myApp.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/home/main");
 
@@ -37,11 +35,12 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 			resolve: { Project: function(Restangular, $stateParams){
 				return Restangular.one('projects', $stateParams.id).get();
 			}},
+			//why inline controller?
+			//todo refactor
 			controller: function($scope, $sce, $stateParams, utils, Project) {
 				$scope.project = Project;
 				$scope.git = $sce.trustAsHtml($scope.project.git);
         $scope.description = $sce.trustAsHtml($scope.project.description);
-				console.log(Project)
 			}
 		})
 
