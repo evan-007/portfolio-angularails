@@ -12,6 +12,10 @@ class ProjectsController < ApplicationController
 		render json: @project, root: false
 	end
 
+	def featured
+		@project = Project.where(featured: true).first
+	end
+
 	def admin
 		@projects = Project.all
 		@tags = Tag.all
