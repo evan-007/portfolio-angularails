@@ -67,7 +67,7 @@ class ProjectsController < ApplicationController
 
 	def project_params
 		params.require(:project).permit(:title, :description, :git,
-		:image, :active, :lede, :link, tag_ids: [])
+		:image, :active, :featured, :lede, :link, tag_ids: [])
 	end
 
 	def admin_only!

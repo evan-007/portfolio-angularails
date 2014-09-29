@@ -1,7 +1,7 @@
 <div class="admin container">
 	<div class="row">
 		<div class="col-md-4">
-			<%= link_to 'New project', new_project_path, class: "btn btn-primary" %> 
+			<%= link_to 'New project', new_project_path, class: "btn btn-primary" %>
 			<%= link_to 'New tag', new_tag_path, class: "btn btn-warning" %>
 			<%= link_to 'Sign out', destroy_user_session_path, method: "DELETE", class: "btn btn-danger" %>
 		</div>
@@ -13,12 +13,14 @@
 				<th>Name</th>
 				<th>ID</th>
 				<th>Active?</th>
+				<th>Featured?</th>
 				<th>Image</th>
 				<% @projects.each do |p| %>
 					<tr>
 						<td><%= link_to p.title, edit_project_path(p)%></td>
 						<td><%= p.id %></td>
 						<td><%= p.active %></td>
+						<td><%= p.featured %></td>
 						<td><%= image_tag(p.image.url(:thumb)) %></td>
 					</tr>
 				<% end %>
