@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140426010537) do
+ActiveRecord::Schema.define(version: 20140929112915) do
 
   create_table "projects", force: true do |t|
     t.string   "title"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140426010537) do
     t.datetime "image_updated_at"
     t.string   "lede"
     t.boolean  "active",             default: true
+    t.boolean  "featured",           default: false
   end
 
   create_table "tags", force: true do |t|
