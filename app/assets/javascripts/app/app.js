@@ -22,12 +22,30 @@ myApp.config(function($stateProvider, $urlRouterProvider){
 
 		.state('portfolio', {
 			url: '/portfolio',
+      abstract: true,
 			templateUrl: 'templates/portfolio',
 			controller: 'ProjectsController',
 			resolve: { Projects: function(Restangular){
 				return Restangular.all('projects').getList();
 			}}
 		})
+
+    .state('portfolio.featured', {
+      url: '',
+      templateUrl: 'templates/featured',
+      controller: function($scope, $sce, $stateParams, utils, Project) {
+        $scope.project = Project;
+        $scope.git = $sce.trustAsHtml($scope.project.git);
+        $scope.description = $sce.trustAsHtml($scope.project.description);
+      },
+      resolve: { Project: function($http, $q){
+        var defer = $q.defer();
+        $http.get('/featured_project').then(function(resp){
+          defer.resolve(resp.data);
+        });
+        return defer.promise;
+      }}
+    })
 
 		.state('portfolio.project', {
 			url: '/project/:id',

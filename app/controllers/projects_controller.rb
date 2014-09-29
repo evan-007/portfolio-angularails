@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :admin]
-	before_action :admin_only!, except: [:index, :show]
+	before_action :admin_only!, except: [:index, :show, :featured]
 	before_action :set_project, only: [:edit, :update, :destroy, :show]
 
 	def index
@@ -14,6 +14,7 @@ class ProjectsController < ApplicationController
 
 	def featured
 		@project = Project.where(featured: true).first
+		render json: @project, root: false
 	end
 
 	def admin
